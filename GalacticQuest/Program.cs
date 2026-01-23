@@ -1,4 +1,5 @@
 ﻿using GalacticQuest.Items;
+using GalacticQuest.Models;
 using GalacticQuest.Monsters;
 using GalacticQuest.Planets;
 
@@ -11,6 +12,16 @@ namespace GalacticQuest
         {
             Console.WriteLine("Hello, Galactic Quest!");
             OpenMainMenu();
+            
+            MonsterLog<Ignifax> Tinelraptor = new MonsterLog<Ignifax>();
+            MonsterLog<Xenotutzi> Mihaitozaurus = new MonsterLog<Xenotutzi>();
+
+            Tinelraptor.AddEntry(new Ignifax("Tinel", 80, 30));
+            Tinelraptor.AddEntry(new Ignifax("Vio", 60, 70));
+            Mihaitozaurus.AddEntry(new Xenotutzi("Mihai", 100, 100));
+            
+            Tinelraptor.ShowAll();
+            Tinelraptor.ShowAll();
         }
 
         internal static void OpenMainMenu()
